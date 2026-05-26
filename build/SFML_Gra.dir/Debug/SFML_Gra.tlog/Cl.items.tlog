@@ -1,0 +1,13 @@
+D:\DanceOfColors\Game\area\area.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\area.obj
+D:\DanceOfColors\Game\boss\boss.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\boss.obj
+D:\DanceOfColors\Game\boss\projectiles\projectile.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\Game\boss\projectiles\projectile.cpp.obj
+D:\DanceOfColors\Game\interface\displays\elementDisplay.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\elementDisplay.obj
+D:\DanceOfColors\Game\interface\displays\healthDisplay.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\healthDisplay.obj
+D:\DanceOfColors\Game\interface\interface.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\interface.obj
+D:\DanceOfColors\Game\interface\score\clock\clock.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\clock.obj
+D:\DanceOfColors\Game\interface\score\score.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\score.obj
+D:\DanceOfColors\Game\menu\menu.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\menu.obj
+D:\DanceOfColors\Game\player\movement\movement.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\movement.obj
+D:\DanceOfColors\Game\player\player.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\player.obj
+D:\DanceOfColors\Game\player\projectiles\projectile.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\Game\player\projectiles\projectile.cpp.obj
+D:\DanceOfColors\main.cpp;D:\DanceOfColors\build\SFML_Gra.dir\Debug\main.obj
