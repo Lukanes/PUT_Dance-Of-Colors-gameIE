@@ -8,12 +8,12 @@ bool Interface::loadResources() {
     }
 
     clockText.setCharacterSize(24);
-    clockText.setFillColor(sf::Color::White);
-    clockText.setPosition({10.f, 10.f});
+    clockText.setFillColor(sf::Color(0, 0, 0));
+    clockText.setPosition({1720.f, 10.f});
 
     scoreText.setCharacterSize(24);
-    scoreText.setFillColor(sf::Color::White);
-    scoreText.setPosition({10.f, 40.f});
+    scoreText.setFillColor(sf::Color(0, 0, 0));
+    scoreText.setPosition({1720.f, 40.f});
 
     return true;
 }
