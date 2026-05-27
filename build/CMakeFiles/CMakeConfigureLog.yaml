@@ -101,7 +101,7 @@ events:
       The output was:
       0
       Wersja programu MSBuild 18.6.3+84d3e95b4 dla .NET Framework
-      Kompilacja rozpocz─Ö┼éa si─Ö 26.05.2026 22:03:36.
+      Kompilacja rozpocz─Ö┼éa si─Ö 27.05.2026 20:46:43.
       
       Projekt ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\4.3.2\\CompilerIdC\\CompilerIdC.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
       PrepareForBuild:
@@ -139,7 +139,7 @@ events:
           Ostrze┼╝enia: 0
           Liczba b┼é─Öd├│w: 0
       
-      Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.78
+      Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.77
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -2342,7 +2342,7 @@ events:
       The output was:
       0
       Wersja programu MSBuild 18.6.3+84d3e95b4 dla .NET Framework
-      Kompilacja rozpocz─Ö┼éa si─Ö 26.05.2026 22:03:37.
+      Kompilacja rozpocz─Ö┼éa si─Ö 27.05.2026 20:46:45.
       
       Projekt ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\4.3.2\\CompilerIdCXX\\CompilerIdCXX.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
       PrepareForBuild:
@@ -2380,7 +2380,7 @@ events:
           Ostrze┼╝enia: 0
           Liczba b┼é─Öd├│w: 0
       
-      Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.76
+      Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.79
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -3543,8 +3543,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-dq5xnw"
-      binary: "D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-dq5xnw"
+      source: "D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-nnk1q9"
+      binary: "D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-nnk1q9"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
@@ -3558,39 +3558,39 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-dq5xnw'
+        Change Dir: 'D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-nnk1q9'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_adb25.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c56de.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         Wersja programu MSBuild 18.6.3+84d3e95b4 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 26.05.2026 22:03:39.
+        Kompilacja rozpocz─Ö┼éa si─Ö 27.05.2026 20:46:46.
         
-        Projekt ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dq5xnw\\cmTC_adb25.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnk1q9\\cmTC_c56de.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
           Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
-          Tworzenie katalogu ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dq5xnw\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_adb25.dir\\Debug\\cmTC_adb25.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnk1q9\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_c56de.dir\\Debug\\cmTC_c56de.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_adb25.dir\\Debug\\cmTC_adb25.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_adb25.dir\\Debug\\cmTC_adb25.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_c56de.dir\\Debug\\cmTC_c56de.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_c56de.dir\\Debug\\cmTC_c56de.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_adb25.dir\\Debug\\\\" /Fd"cmTC_adb25.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_c56de.dir\\Debug\\\\" /Fd"cmTC_c56de.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36244 for x64
           Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_adb25.dir\\Debug\\\\" /Fd"cmTC_adb25.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_c56de.dir\\Debug\\\\" /Fd"cmTC_c56de.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dq5xnw\\Debug\\cmTC_adb25.exe" /INCREMENTAL /ILK:"cmTC_adb25.dir\\Debug\\cmTC_adb25.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-dq5xnw/Debug/cmTC_adb25.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-dq5xnw/Debug/cmTC_adb25.lib" /MACHINE:X64  /machine:x64 cmTC_adb25.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_adb25.vcxproj -> D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dq5xnw\\Debug\\cmTC_adb25.exe
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnk1q9\\Debug\\cmTC_c56de.exe" /INCREMENTAL /ILK:"cmTC_c56de.dir\\Debug\\cmTC_c56de.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-nnk1q9/Debug/cmTC_c56de.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-nnk1q9/Debug/cmTC_c56de.lib" /MACHINE:X64  /machine:x64 cmTC_c56de.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_c56de.vcxproj -> D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnk1q9\\Debug\\cmTC_c56de.exe
         FinalizeBuildStatus:
-          Usuwanie pliku ÔÇ×cmTC_adb25.dir\\Debug\\cmTC_adb25.tlog\\unsuccessfulbuildÔÇŁ.
-          Modyfikowanie ÔÇ×cmTC_adb25.dir\\Debug\\cmTC_adb25.tlog\\cmTC_adb25.lastbuildstateÔÇŁ.
-        Kompilowanie projektu ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dq5xnw\\cmTC_adb25.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
+          Usuwanie pliku ÔÇ×cmTC_c56de.dir\\Debug\\cmTC_c56de.tlog\\unsuccessfulbuildÔÇŁ.
+          Modyfikowanie ÔÇ×cmTC_c56de.dir\\Debug\\cmTC_c56de.tlog\\cmTC_c56de.lastbuildstateÔÇŁ.
+        Kompilowanie projektu ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnk1q9\\cmTC_c56de.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
         
         Kompilacja powiod┼éa si─Ö.
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 0
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.42
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.44
         
       exitCode: 0
   -
@@ -3630,8 +3630,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-ngojbl"
-      binary: "D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-ngojbl"
+      source: "D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-mfqx49"
+      binary: "D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-mfqx49"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -3646,39 +3646,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-ngojbl'
+        Change Dir: 'D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-mfqx49'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_da9dd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_41849.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         Wersja programu MSBuild 18.6.3+84d3e95b4 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 26.05.2026 22:03:40.
+        Kompilacja rozpocz─Ö┼éa si─Ö 27.05.2026 20:46:46.
         
-        Projekt ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngojbl\\cmTC_da9dd.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfqx49\\cmTC_41849.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
           Dane wyj┼Ťciowe ze struktur─ů s─ů w┼é─ůczone. Formatowanie diagnostyki kompilatora b─Ödzie odzwierciedla─ç hierarchi─Ö b┼é─Öd├│w. Aby uzyska─ç wi─Öcej informacji, zobacz https://aka.ms/cpp/structured-output.
-          Tworzenie katalogu ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngojbl\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_da9dd.dir\\Debug\\cmTC_da9dd.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfqx49\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_41849.dir\\Debug\\cmTC_41849.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_da9dd.dir\\Debug\\cmTC_da9dd.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_da9dd.dir\\Debug\\cmTC_da9dd.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_41849.dir\\Debug\\cmTC_41849.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_41849.dir\\Debug\\cmTC_41849.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_da9dd.dir\\Debug\\\\" /Fd"cmTC_da9dd.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_41849.dir\\Debug\\\\" /Fd"cmTC_41849.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36244 for x64
           Copyright (C) Microsoft Corporation. Wszystkie prawa zastrze┼╝one.
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_da9dd.dir\\Debug\\\\" /Fd"cmTC_da9dd.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_41849.dir\\Debug\\\\" /Fd"cmTC_41849.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngojbl\\Debug\\cmTC_da9dd.exe" /INCREMENTAL /ILK:"cmTC_da9dd.dir\\Debug\\cmTC_da9dd.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-ngojbl/Debug/cmTC_da9dd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-ngojbl/Debug/cmTC_da9dd.lib" /MACHINE:X64  /machine:x64 cmTC_da9dd.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_da9dd.vcxproj -> D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngojbl\\Debug\\cmTC_da9dd.exe
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfqx49\\Debug\\cmTC_41849.exe" /INCREMENTAL /ILK:"cmTC_41849.dir\\Debug\\cmTC_41849.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-mfqx49/Debug/cmTC_41849.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/DanceOfColors/build/CMakeFiles/CMakeScratch/TryCompile-mfqx49/Debug/cmTC_41849.lib" /MACHINE:X64  /machine:x64 cmTC_41849.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_41849.vcxproj -> D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfqx49\\Debug\\cmTC_41849.exe
         FinalizeBuildStatus:
-          Usuwanie pliku ÔÇ×cmTC_da9dd.dir\\Debug\\cmTC_da9dd.tlog\\unsuccessfulbuildÔÇŁ.
-          Modyfikowanie ÔÇ×cmTC_da9dd.dir\\Debug\\cmTC_da9dd.tlog\\cmTC_da9dd.lastbuildstateÔÇŁ.
-        Kompilowanie projektu ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngojbl\\cmTC_da9dd.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
+          Usuwanie pliku ÔÇ×cmTC_41849.dir\\Debug\\cmTC_41849.tlog\\unsuccessfulbuildÔÇŁ.
+          Modyfikowanie ÔÇ×cmTC_41849.dir\\Debug\\cmTC_41849.tlog\\cmTC_41849.lastbuildstateÔÇŁ.
+        Kompilowanie projektu ÔÇ×D:\\DanceOfColors\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mfqx49\\cmTC_41849.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
         
         Kompilacja powiod┼éa si─Ö.
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 0
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.44
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.46
         
       exitCode: 0
   -

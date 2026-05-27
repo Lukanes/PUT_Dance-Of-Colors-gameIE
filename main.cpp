@@ -30,7 +30,7 @@ int main() {
             }
         }
 
-        player.update(deltaTime);
+        player.update(deltaTime, 3440.f, 1400.f);
         gameInterface.update(gameClock, score);
 
         window.clear(sf::Color(178, 178, 178));

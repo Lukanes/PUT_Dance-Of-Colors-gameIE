@@ -1,20 +1,23 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "movement.h"
+#include "sprites/CloakMesh.h"
 
 class Player {
 public:
     Player(float startX, float startY);
 
-    void update(float deltaTime);
+    void update(float deltaTime, float screenWidth, float screenHeight);
     void draw(sf::RenderWindow& window);
 
     int getHealth() const;
     void setHealth(int newHealth);
 
 private:
-    void handleInput(float deltaTime);
-
     sf::RectangleShape shape;
     int health;
-    float movementSpeed;
+    PlayerMovement movementHandler;
+
+    CloakMesh cloak;
+    sf::Clock gameClock;
 };

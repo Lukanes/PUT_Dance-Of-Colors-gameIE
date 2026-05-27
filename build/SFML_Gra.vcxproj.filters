@@ -37,6 +37,9 @@
     <ClCompile Include="D:\DanceOfColors\Game\player\projectiles\projectile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\DanceOfColors\Game\player\sprites\CloakMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\DanceOfColors\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
