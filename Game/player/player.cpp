@@ -11,10 +11,8 @@ Player::Player(float startX, float startY) : movementHandler(400.f, 600.f, 1200.
 
     health = 7;
 
-    // Inicjalizacja peleryny
-    cloak.initialize(32, 90.f, 170.f);  // wider than before
+    cloak.initialize(32, 90.f, 170.f);
 
-    // In update(), position it slightly behind center:
 }
 
 void Player::update(float deltaTime, float screenWidth, float screenHeight) {
@@ -26,13 +24,11 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight) {
     Area::enforceBoundaries(shape, currentVelocity, screenWidth, screenHeight);
     movementHandler.setVelocity(currentVelocity);
 
-    // Przekazujemy deltaTime oraz prędkość do peleryny, aby animacja była zależna od ruchu
     cloak.update(deltaTime, currentVelocity);
     
 
     sf::Vector2f playerPos = shape.getPosition();
     
-    // Ustawienie pozycji peleryny (np. na środku gracza)
     float cloakX = playerPos.x + 5.f;
     float cloakY = playerPos.y + 8.f;
     
@@ -40,7 +36,6 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight) {
 }
 
 void Player::draw(sf::RenderWindow& window) {
-    // Rysujemy pelerynę przed graczem, aby sprawiała wrażenie "założonej"
     window.draw(cloak);
     window.draw(shape);
 }

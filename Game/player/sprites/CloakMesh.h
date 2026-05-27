@@ -25,9 +25,9 @@ private:
     float m_windX    = 0.f;
 
     CloakColorFn    m_colorFn;
-    sf::VertexArray m_fill;   // outer bright layer
-    sf::VertexArray m_inner;  // dark inner lining
-    sf::VertexArray m_folds;  // edge highlight strip
+    sf::VertexArray m_fill;
+    sf::VertexArray m_inner;
+    sf::VertexArray m_folds;
 
     std::vector<float> m_hemX;
     std::vector<float> m_hemY;

@@ -5,7 +5,6 @@
 static constexpr float PI = 3.14159265f;
 
 static sf::Color outerColor(float /*t*/, float v) {
-    // Deep crimson, darkens heavily toward bottom (heavy fabric)
     uint8_t r = static_cast<uint8_t>(190 - 80 * v);
     uint8_t g = static_cast<uint8_t>(10  -  5 * v);
     uint8_t b = static_cast<uint8_t>(10  -  5 * v);
@@ -46,21 +45,18 @@ void CloakMesh::initialize(int segments, float width, float height) {
 }
 
 void CloakMesh::update(float deltaTime, sf::Vector2f velocity) {
-    m_time += deltaTime * 2.2f;  // slower — heavy fabric
+    m_time += deltaTime * 2.2f;
 
-    // ── WIND ──────────────────────────────────────────────────────────
-    float targetWindY = -velocity.y * 0.09f;   // jump lifts hem, less than cape
-    float targetWindX =  velocity.x * 0.09f;   // trail behind movement
-    float s = 1.f - std::exp(-deltaTime * 3.f); // slower smoothing = heavier feel
+    float targetWindY = -velocity.y * 0.09f;
+    float targetWindX =  velocity.x * 0.09f;
+    float s = 1.f - std::exp(-deltaTime * 3.f);
     m_windY += (targetWindY - m_windY) * s;
     m_windX += (targetWindX - m_windX) * s;
 
-    // Narrowing only kicks in strongly during jumps
     float narrowing = std::max(0.f, std::min(1.f, m_windY / (m_height * 0.6f)));
 
-    // ── PHYSICS: slow heavy spring ────────────────────────────────────
-    const float stiffness = 12.f;  // lower = more lag
-    const float damping   = 5.5f;  // lower = more oscillation after stop
+    const float stiffness = 12.f;
+    const float damping   = 5.5f;
 
     for (int i = 0; i <= m_segments; ++i) {
         float t = static_cast<float>(i) / static_cast<float>(m_segments);
@@ -68,7 +64,6 @@ void CloakMesh::update(float deltaTime, sf::Vector2f velocity) {
         float fullX = t * m_width - m_windX;
         float restX = fullX + (m_width * 0.5f - fullX) * narrowing * 0.75f;
 
-        // Subtle hem wave — short amplitude, heavy cloak barely ripples
         float wave  = std::sin(t * PI * 2.f - m_time) * m_height * 0.04f;
         float restY = m_height + wave - m_windY;
 
@@ -82,33 +77,25 @@ void CloakMesh::update(float deltaTime, sf::Vector2f velocity) {
 
     float swing = std::max(-1.f, std::min(1.f, -m_windX / (m_width * 0.25f)));
 
-    // ── BUILD VERTICES ────────────────────────────────────────────────
     for (int i = 0; i <= m_segments; ++i) {
         float t = static_cast<float>(i) / static_cast<float>(m_segments);
-
-        // Top: narrow arch — cloak hangs from a small collar/hood area
         float topSpread = (m_width * 0.52f) * (1.f - narrowing * 0.2f);
         float xTop = m_width * 0.5f + (t - 0.5f) * topSpread;
-        float yTop = -std::sin(t * PI) * m_height * 0.08f; // flatter arch than cape
+        float yTop = -std::sin(t * PI) * m_height * 0.08f;
 
-        // Bottom: very wide bell — cloak wraps around the whole body
-        // At rest the bottom is wider than the top by a large amount
         float bellFlare = m_width * 0.38f * (1.f - narrowing * 0.85f);
         float xBot = m_hemX[i] + (t - 0.5f) * bellFlare;
         float yBot = m_hemY[i];
 
-        // Outer
         m_fill[static_cast<std::size_t>(i * 2 + 0)] = {{xTop, yTop}, outerColor(t, 0.f)};
         m_fill[static_cast<std::size_t>(i * 2 + 1)] = {{xBot, yBot}, outerColor(t, 1.f)};
 
-        // Inner lining peeks when swinging
         float peekAmt = -swing * m_width * 0.20f;
         float xInBot  = xBot + peekAmt;
         float yInBot  = yBot - m_height * 0.03f * std::abs(swing);
         m_inner[static_cast<std::size_t>(i * 2 + 0)] = {{xTop,  yTop},  innerColor(t, 0.f)};
         m_inner[static_cast<std::size_t>(i * 2 + 1)] = {{xInBot,yInBot},innerColor(t, 1.f)};
 
-        // Edge highlight — very subtle on a cloak
         float edgeBright = (swing > 0.f) ? t : (1.f - t);
         edgeBright = std::pow(edgeBright, 8.f);
         uint8_t ea = static_cast<uint8_t>(140 * edgeBright);
