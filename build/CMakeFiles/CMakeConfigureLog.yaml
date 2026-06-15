@@ -6586,3 +6586,14 @@ events:
         - "C:/Program Files/SFML_Gra"
       CMAKE_FIND_ROOT_PATH: "C:/src/vcpkg/installed/x64-windows/debug;C:/src/vcpkg/installed/x64-windows"
 ...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+...
