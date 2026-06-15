@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <vector>
+#include <memory>
 #include "movement/movement.h"
 #include "projectiles/projectile.h"
 #include "sprites/CloakMesh.h"
@@ -11,10 +12,13 @@ public:
     Player(float startX, float startY);
     void update(float deltaTime, float screenWidth, float screenHeight, const std::vector<sf::FloatRect>& platforms);
     void draw(sf::RenderWindow& window);
-    float getMaxHealth() const;
+
     int getHealth() const;
     void setHealth(int newHealth);
-    std::vector<PlayerProjectile>& getProjectiles();
+    float getMaxHealth() const { return 99.f; }
+
+    std::vector<std::unique_ptr<Projectile>>& getProjectiles();
+
     sf::Vector2f getPosition() const;
     void resetPositionForPhase(int phase, float screenWidth, float screenHeight);
     void reset(float startX, float startY);
@@ -40,7 +44,8 @@ private:
     CloakMesh cloak;
     int health;
 
-    std::vector<PlayerProjectile> projectiles;
+    std::vector<std::unique_ptr<Projectile>> projectiles;
+
     int currentElementType;
     std::vector<int> elementCycle;
     int currentElementIndex;

@@ -8,15 +8,15 @@
   "ExpandedNodes": [
     "",
     "\\Game",
-    "\\Game\\assets",
     "\\Game\\scripts",
     "\\Game\\scripts\\area",
     "\\Game\\scripts\\boss",
     "\\Game\\scripts\\interface",
     "\\Game\\scripts\\player",
     "\\Game\\scripts\\player\\movement",
-    "\\Game\\scripts\\player\\projectiles"
+    "\\Game\\scripts\\player\\projectiles",
+    "\\Game\\scripts\\player\\sprites"
   ],
-  "SelectedNode": "\\main.cpp",
+  "SelectedNode": "\\Game\\scripts\\player\\player.cpp",
   "PreviewInSolutionExplorer": false
 }

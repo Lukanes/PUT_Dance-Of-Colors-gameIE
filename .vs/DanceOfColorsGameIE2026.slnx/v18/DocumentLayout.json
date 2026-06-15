@@ -3,8 +3,60 @@
   "WorkspaceRootPath": "D:\\DanceOfColorsGameIE2026\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\boss.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\boss\\boss.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\projectiles\\projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\projectiles\\projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\movement\\movement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\area\\area.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\area\\area.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\sprites\\CloakMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\sprites\\CloakMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\boss.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\boss\\boss.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\interface\\interface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\interface\\interface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\movement\\movement.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\area\\area.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\area\\area.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\assets\\background.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\assets\\background.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
@@ -19,22 +71,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\animation\\animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\area\\area.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\area\\area.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\area\\area.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\area\\area.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\boss.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\boss\\boss.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\boss.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\boss\\boss.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\bossAttack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\boss\\bossAttack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -43,44 +79,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\interface\\interface.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\interface\\interface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\interface\\interface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\movement\\movement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\movement\\movement.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\projectiles\\projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\projectiles\\projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\.vs\\launch.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vs\\launch.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\sprites\\CloakMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\sprites\\CloakMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\sprites\\CloakMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\scripts\\player\\sprites\\CloakMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\interface\\interface.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -125,10 +129,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\interface\\displays\\elementDisplay.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\interface\\displays\\elementDisplay.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\assets\\background.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Game\\assets\\background.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DanceOfColorsGameIE2026\\Game\\player\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -185,7 +185,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -193,72 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "README.md",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-06-15T15:08:13.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "interface.h",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\interface\\interface.h",
-              "RelativeDocumentMoniker": "Game\\scripts\\interface\\interface.h",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\interface\\interface.h",
-              "RelativeToolTip": "Game\\scripts\\interface\\interface.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-06-14T20:24:47.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "interface.cpp",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\interface\\interface.cpp",
-              "RelativeDocumentMoniker": "Game\\scripts\\interface\\interface.cpp",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\interface\\interface.cpp",
-              "RelativeToolTip": "Game\\scripts\\interface\\interface.cpp",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAJ4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-06-14T20:24:54.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "bossAttack.h",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\bossAttack.h",
-              "RelativeDocumentMoniker": "Game\\scripts\\boss\\bossAttack.h",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\bossAttack.h",
-              "RelativeToolTip": "Game\\scripts\\boss\\bossAttack.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-06-14T20:17:38.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "boss.h",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\boss.h",
-              "RelativeDocumentMoniker": "Game\\scripts\\boss\\boss.h",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\boss.h",
-              "RelativeToolTip": "Game\\scripts\\boss\\boss.h",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAgwFkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-06-14T20:17:44.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "boss.cpp",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\boss.cpp",
               "RelativeDocumentMoniker": "Game\\scripts\\boss\\boss.cpp",
@@ -271,7 +206,150 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "projectile.h",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.h",
+              "RelativeDocumentMoniker": "Game\\scripts\\player\\projectiles\\projectile.h",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.h",
+              "RelativeToolTip": "Game\\scripts\\player\\projectiles\\projectile.h",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-14T20:27:50.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "boss.h",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\boss.h",
+              "RelativeDocumentMoniker": "Game\\scripts\\boss\\boss.h",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\boss.h",
+              "RelativeToolTip": "Game\\scripts\\boss\\boss.h",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAFkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-14T20:17:44.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CloakMesh.cpp",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\sprites\\CloakMesh.cpp",
+              "RelativeDocumentMoniker": "Game\\scripts\\player\\sprites\\CloakMesh.cpp",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\sprites\\CloakMesh.cpp",
+              "RelativeToolTip": "Game\\scripts\\player\\sprites\\CloakMesh.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-14T20:57:12.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "area.cpp",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\area\\area.cpp",
+              "RelativeDocumentMoniker": "Game\\scripts\\area\\area.cpp",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\area\\area.cpp",
+              "RelativeToolTip": "Game\\scripts\\area\\area.cpp",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-14T20:23:40.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "movement.cpp",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.cpp",
+              "RelativeDocumentMoniker": "Game\\scripts\\player\\movement\\movement.cpp",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.cpp",
+              "RelativeToolTip": "Game\\scripts\\player\\movement\\movement.cpp",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-14T20:27:44.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "projectile.cpp",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.cpp",
+              "RelativeDocumentMoniker": "Game\\scripts\\player\\projectiles\\projectile.cpp",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.cpp",
+              "RelativeToolTip": "Game\\scripts\\player\\projectiles\\projectile.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-14T20:25:55.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "player.cpp",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.cpp",
+              "RelativeDocumentMoniker": "Game\\scripts\\player\\player.cpp",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.cpp",
+              "RelativeToolTip": "Game\\scripts\\player\\player.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-14T20:28:35.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "player.h",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.h",
+              "RelativeDocumentMoniker": "Game\\scripts\\player\\player.h",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.h",
+              "RelativeToolTip": "Game\\scripts\\player\\player.h",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwDwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-14T20:28:01.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwLcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-06-12T16:52:21.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "interface.h",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\interface\\interface.h",
+              "RelativeDocumentMoniker": "Game\\scripts\\interface\\interface.h",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\interface\\interface.h",
+              "RelativeToolTip": "Game\\scripts\\interface\\interface.h",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEAAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-14T20:24:47.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "movement.h",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.h",
+              "RelativeDocumentMoniker": "Game\\scripts\\player\\movement\\movement.h",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.h",
+              "RelativeToolTip": "Game\\scripts\\player\\movement\\movement.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-14T20:27:39.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "area.h",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\area\\area.h",
               "RelativeDocumentMoniker": "Game\\scripts\\area\\area.h",
@@ -284,20 +362,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "area.cpp",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\area\\area.cpp",
-              "RelativeDocumentMoniker": "Game\\scripts\\area\\area.cpp",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\area\\area.cpp",
-              "RelativeToolTip": "Game\\scripts\\area\\area.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-06-14T20:23:40.99Z",
+              "DocumentIndex": 13,
+              "Title": "background.frag",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\assets\\background.frag",
+              "RelativeDocumentMoniker": "Game\\assets\\background.frag",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\assets\\background.frag",
+              "RelativeToolTip": "Game\\assets\\background.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-14T14:36:41.353Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "animation.h",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\animation\\animation.h",
               "RelativeDocumentMoniker": "Game\\scripts\\animation\\animation.h",
@@ -305,38 +383,47 @@
               "RelativeToolTip": "Game\\scripts\\animation\\animation.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-06-14T20:17:18.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-14T20:17:18.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAOMAAAAAAAAAAAAAAOMAAAABAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "bossAttack.h",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\bossAttack.h",
+              "RelativeDocumentMoniker": "Game\\scripts\\boss\\bossAttack.h",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\boss\\bossAttack.h",
+              "RelativeToolTip": "Game\\scripts\\boss\\bossAttack.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-06-14T20:17:38.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "interface.cpp",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\interface\\interface.cpp",
+              "RelativeDocumentMoniker": "Game\\scripts\\interface\\interface.cpp",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\interface\\interface.cpp",
+              "RelativeToolTip": "Game\\scripts\\interface\\interface.cpp",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAJ4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-06-12T16:52:21.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-14T20:24:54.302Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "movement.cpp",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.cpp",
-              "RelativeDocumentMoniker": "Game\\scripts\\player\\movement\\movement.cpp",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.cpp",
-              "RelativeToolTip": "Game\\scripts\\player\\movement\\movement.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-06-14T20:27:44.431Z",
-              "EditorCaption": ""
+              "DocumentIndex": 14,
+              "Title": "README.md",
+              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "D:\\DanceOfColorsGameIE2026\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-06-15T15:08:13.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "CMakeLists.txt",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\CMakeLists.txt",
               "RelativeDocumentMoniker": "CMakeLists.txt",
@@ -344,77 +431,11 @@
               "RelativeToolTip": "CMakeLists.txt",
               "ViewState": "AgIAAAcAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-06-13T22:27:56.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-13T22:27:56.398Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "movement.h",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.h",
-              "RelativeDocumentMoniker": "Game\\scripts\\player\\movement\\movement.h",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\movement\\movement.h",
-              "RelativeToolTip": "Game\\scripts\\player\\movement\\movement.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-06-14T20:27:39.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "projectile.cpp",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.cpp",
-              "RelativeDocumentMoniker": "Game\\scripts\\player\\projectiles\\projectile.cpp",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.cpp",
-              "RelativeToolTip": "Game\\scripts\\player\\projectiles\\projectile.cpp",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAAKkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-06-14T20:25:55.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "projectile.h",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.h",
-              "RelativeDocumentMoniker": "Game\\scripts\\player\\projectiles\\projectile.h",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\projectiles\\projectile.h",
-              "RelativeToolTip": "Game\\scripts\\player\\projectiles\\projectile.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-06-14T20:27:50.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "player.cpp",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.cpp",
-              "RelativeDocumentMoniker": "Game\\scripts\\player\\player.cpp",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.cpp",
-              "RelativeToolTip": "Game\\scripts\\player\\player.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-06-14T20:28:35.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "player.h",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.h",
-              "RelativeDocumentMoniker": "Game\\scripts\\player\\player.h",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\player.h",
-              "RelativeToolTip": "Game\\scripts\\player\\player.h",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-06-14T20:28:01.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "launch.vs.json",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\.vs\\launch.vs.json",
               "RelativeDocumentMoniker": ".vs\\launch.vs.json",
@@ -427,19 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CloakMesh.cpp",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\sprites\\CloakMesh.cpp",
-              "RelativeDocumentMoniker": "Game\\scripts\\player\\sprites\\CloakMesh.cpp",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\sprites\\CloakMesh.cpp",
-              "RelativeToolTip": "Game\\scripts\\player\\sprites\\CloakMesh.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-06-14T20:57:12.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "CloakMesh.h",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\scripts\\player\\sprites\\CloakMesh.h",
               "RelativeDocumentMoniker": "Game\\scripts\\player\\sprites\\CloakMesh.h",
@@ -451,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "healthDisplay.h",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\interface\\displays\\healthDisplay.h",
               "RelativeDocumentMoniker": "Game\\interface\\displays\\healthDisplay.h",
@@ -463,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "score.cpp",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\interface\\score\\score.cpp",
               "RelativeDocumentMoniker": "Game\\interface\\score\\score.cpp",
@@ -475,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "score.h",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\interface\\score\\score.h",
               "RelativeDocumentMoniker": "Game\\interface\\score\\score.h",
@@ -487,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "clock.cpp",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\interface\\score\\clock\\clock.cpp",
               "RelativeDocumentMoniker": "Game\\interface\\score\\clock\\clock.cpp",
@@ -499,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "clock.h",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\interface\\score\\clock\\clock.h",
               "RelativeDocumentMoniker": "Game\\interface\\score\\clock\\clock.h",
@@ -511,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "menu.cpp",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\menu\\menu.cpp",
               "RelativeDocumentMoniker": "Game\\menu\\menu.cpp",
@@ -523,7 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "menu.h",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\menu\\menu.h",
               "RelativeDocumentMoniker": "Game\\menu\\menu.h",
@@ -535,7 +544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "interface.h",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\interface\\interface.h",
               "RelativeDocumentMoniker": "Game\\interface\\interface.h",
@@ -547,7 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "healthDisplay.cpp",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\interface\\displays\\healthDisplay.cpp",
               "RelativeDocumentMoniker": "Game\\interface\\displays\\healthDisplay.cpp",
@@ -559,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "elementDisplay.h",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\interface\\displays\\elementDisplay.h",
               "RelativeDocumentMoniker": "Game\\interface\\displays\\elementDisplay.h",
@@ -571,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "elementDisplay.cpp",
               "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\interface\\displays\\elementDisplay.cpp",
               "RelativeDocumentMoniker": "Game\\interface\\displays\\elementDisplay.cpp",
@@ -580,18 +589,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-06-12T17:10:08.036Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "background.frag",
-              "DocumentMoniker": "D:\\DanceOfColorsGameIE2026\\Game\\assets\\background.frag",
-              "RelativeDocumentMoniker": "Game\\assets\\background.frag",
-              "ToolTip": "D:\\DanceOfColorsGameIE2026\\Game\\assets\\background.frag",
-              "RelativeToolTip": "Game\\assets\\background.frag",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAswIoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-14T14:36:41.353Z"
             },
             {
               "$type": "Document",

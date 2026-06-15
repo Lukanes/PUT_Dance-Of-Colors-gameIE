@@ -165,14 +165,14 @@ int main() {
             auto& bossAttacks = boss.getAttacks();
 
             for (auto& proj : player.getProjectiles()) {
-                if (!proj.isActive()) continue;
+                if (!proj->isActive()) continue;
 
-                if (proj.getType() == 2) {
+                if (proj->getType() == 2) {
                     bool blockedByEarth = false;
                     for (auto& atk : bossAttacks) {
                         if (atk.active && atk.type == 2) {
-                            if (proj.checkCollision(atk.shape.getGlobalBounds())) {
-                                proj.deactivate();
+                            if (proj->checkCollision(atk.shape.getGlobalBounds())) {
+                                proj->deactivate();
                                 blockedByEarth = true;
                                 break;
                             }
@@ -181,24 +181,30 @@ int main() {
                     if (blockedByEarth) continue;
                 }
 
-                if (!proj.isActive()) continue;
+                if (!proj->isActive()) continue;
 
-                if (proj.checkCollision(boss.getBounds())) {
+                if (!proj->isActive()) continue;
+
+                if (proj->checkCollision(boss.getBounds())) {
                     bool isEffective = false;
-                    if (phase == 0 && proj.getType() == 0) isEffective = true;
-                    if (phase == 1 && proj.getType() == 3) isEffective = true;
-                    if (phase == 2 && proj.getType() == 2) isEffective = true;
-                    if (phase == 3 && proj.getType() == 1) isEffective = true;
+
+                    if (phase == 0 && proj->getType() == 0) isEffective = true;
+                    if (phase == 1 && proj->getType() == 3) isEffective = true;
+                    if (phase == 2 && proj->getType() == 2) isEffective = true;
+                    if (phase == 3 && proj->getType() == 1) isEffective = true;
 
                     if (isEffective) {
-                        boss.takeDamage(proj.getDamage());
+
+                        boss.takeDamage(proj->getDamage());
+
+
                         float baseScore = 100.0f;
-                        float pointsToAdd = (baseScore * currentMultiplier * proj.getDamage()) + (currentMultiplier * baseScore);
+                        float pointsToAdd = (baseScore * currentMultiplier * proj->getDamage()) + (currentMultiplier * baseScore);
                         score += pointsToAdd;
                     }
 
-                    if (proj.getType() != 0) {
-                        proj.deactivate();
+                    if (proj->getType() != 0) {
+                        proj->deactivate();
                     }
                 }
             }

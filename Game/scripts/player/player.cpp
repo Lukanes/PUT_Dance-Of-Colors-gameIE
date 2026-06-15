@@ -5,7 +5,7 @@
 #include <cstdint>
 
 Player::Player(float startX, float startY) : movementHandler(400.f, 1000.f, 1200.f, 800.f), headSprite(texProjWater) {
-    shape.setSize(sf::Vector2f(40.f, 80.f));
+    shape.setSize(sf::Vector2f(60.f, 120.f));
     shape.setFillColor(sf::Color::Transparent);
     shape.setOutlineThickness(0.f);
     shape.setPosition(sf::Vector2f(startX, startY));
@@ -32,6 +32,12 @@ Player::Player(float startX, float startY) : movementHandler(400.f, 1000.f, 1200
     texProjWater.loadFromFile("assets/player_projectile_water.png");
     texProjEarth.loadFromFile("assets/player_projectile_earth.png");
     texProjAir.loadFromFile("assets/player_projectile_air.png");
+
+    soundBuffers[0].loadFromFile("assets/shoot_water.mp3");
+    soundBuffers[1].loadFromFile("assets/shoot_fire.mp3");
+    soundBuffers[2].loadFromFile("assets/shoot_air.mp3");
+    soundBuffers[3].loadFromFile("assets/shoot_earth.mp3");
+    soundBuffers[4].loadFromFile("assets/player_damage.mp3");
 
     for (int i = 0; i < 5; ++i) sounds.emplace_back(soundBuffers[i]);
 }
@@ -74,8 +80,8 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight, cons
 
     sf::Vector2f playerPos = shape.getPosition();
 
-    float cloakX = playerPos.x + 30.f;
-    float cloakY = playerPos.y - 20.f;
+    float cloakX = playerPos.x;
+    float cloakY = playerPos.y-80.f;
     cloak.setPosition(sf::Vector2f(cloakX, cloakY));
     cloak.update(deltaTime, currentVelocity);
 
@@ -149,9 +155,11 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight, cons
     float headScaleX = headScaleBase;
     headSprite.setScale(sf::Vector2f(headScaleX, headScaleBase));
 
+    if (currentElementType == 3) headSprite.setRotation(sf::degrees(0.f));
+    else headSprite.setRotation(sf::degrees(90.f));
 
     hoverOffset = std::sin(totalTime * 4.0f) * 6.0f;
-    headSprite.setPosition(sf::Vector2f(playerPos.x + 75.f, playerPos.y - 55.f + hoverOffset));
+    headSprite.setPosition(sf::Vector2f(playerPos.x+45.f, playerPos.y - 150.f + hoverOffset));
 
     if (isFullyCharged || (currentElementType == 0 && chargeTimer >= 1.0f)) {
         float flashCycle = std::fmod(totalTime, 0.2f);
@@ -166,49 +174,44 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight, cons
     float spawnX = playerPos.x + 30.f;
     float spawnY = playerPos.y + 60.f;
 
-    float maxCharge = 5.0f;
-    if (currentElementType == 3) maxCharge = 1.0f;
-    if (currentElementType == 2) maxCharge = 2.0f;
+    float maxCharge = 10.f;
+    if (currentElementType == 3) maxCharge = 6.f;
+    if (currentElementType == 2) maxCharge = 1.0f;
 
     if (currentElementType == 1 || currentElementType == 3) {
-		if (currentElementType == 1){
-            headSprite.setRotation(sf::degrees(90.f));
-        }
-        else
-        {
-            headSprite.setRotation(sf::degrees(0.f));
-        }
         if (zPressed && prevZPressed && !isFullyCharged && projectiles.empty()) {
             chargeTimer += deltaTime;
             if (chargeTimer >= maxCharge) { chargeTimer = maxCharge; isFullyCharged = true; }
         }
         else if (zPressed && !prevZPressed && isFullyCharged) {
-            const sf::Texture* tex = (currentElementType == 1) ? &texProjFire : &texProjEarth;
-            projectiles.emplace_back(spawnX, spawnY, aimX, aimY, currentElementType, chargeTimer, tex);
+            if (currentElementType == 1) {
+                projectiles.push_back(std::make_unique<FireProjectile>(spawnX, spawnY, aimX, aimY, &texProjFire));
+            }
+            else {
+                projectiles.push_back(std::make_unique<EarthProjectile>(spawnX, spawnY, aimX, aimY, &texProjEarth));
+            }
             isFullyCharged = false; chargeTimer = 0.f; cloak.setCurrentColor(sf::Color(128, 128, 128));
         }
         else if (!zPressed && prevZPressed && !isFullyCharged) chargeTimer = 0.f;
     }
     else if (currentElementType == 0) {
-        headSprite.setRotation(sf::degrees(90.f));
         if (zPressed && projectiles.empty()) {
             chargeTimer += deltaTime;
-            if (chargeTimer > 5.0f) chargeTimer = 5.0f;
+            if (chargeTimer > 10.f) chargeTimer = 10.f;
         }
         else if (!zPressed && prevZPressed) {
             if (chargeTimer >= 1.0f) {
-                projectiles.emplace_back(spawnX, spawnY, aimX, aimY, 0, chargeTimer, &texProjWater);
+                projectiles.push_back(std::make_unique<WaterProjectile>(spawnX, spawnY, aimX, aimY, chargeTimer, &texProjWater));
             }
             chargeTimer = 0.f; cloak.setCurrentColor(sf::Color(128, 128, 128));
         }
     }
     else if (currentElementType == 2) {
-        headSprite.setRotation(sf::degrees(90.f));
         if (zPressed) {
             chargeTimer += deltaTime;
             if (chargeTimer > maxCharge) chargeTimer = maxCharge;
-            if (airCooldownTimer <= 0.15f) {
-                projectiles.emplace_back(spawnX, spawnY, aimX, aimY, 2, 0.f, &texProjAir);
+            if (airCooldownTimer <= 0.f) {
+                projectiles.push_back(std::make_unique<AirProjectile>(spawnX, spawnY, aimX, aimY, &texProjAir));
                 airCooldownTimer = 0.15f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / 0.35f));
             }
         }
@@ -233,8 +236,8 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight, cons
     else cloak.setCurrentColor(gray);
 
     for (auto it = projectiles.begin(); it != projectiles.end();) {
-        it->update(deltaTime, sf::Vector2f(spawnX, spawnY), aimX, aimY);
-        if (!it->isActive()) it = projectiles.erase(it);
+        (*it)->update(deltaTime, sf::Vector2f(spawnX, spawnY), aimX, aimY);
+        if (!(*it)->isActive()) it = projectiles.erase(it);
         else ++it;
     }
 }
@@ -247,14 +250,13 @@ void Player::draw(sf::RenderWindow& window) {
     }
 
     for (auto& proj : projectiles) {
-        proj.draw(window);
+        proj->draw(window);
     }
 }
 
 int Player::getHealth() const { return health; }
-float Player::getMaxHealth() const { return health < 10 ? 10.0f : 10.0f; }
 void Player::setHealth(int newHealth) { health = newHealth; }
-std::vector<PlayerProjectile>& Player::getProjectiles() { return projectiles; }
+std::vector<std::unique_ptr<Projectile>>& Player::getProjectiles() { return projectiles; }
 sf::Vector2f Player::getPosition() const { return shape.getPosition(); }
 
 void Player::resetPositionForPhase(int phase, float screenWidth, float screenHeight) {
