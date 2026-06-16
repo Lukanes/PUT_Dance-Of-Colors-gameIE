@@ -5,7 +5,7 @@
 #include <cstdint>
 
 Player::Player(float startX, float startY) : movementHandler(400.f, 1000.f, 1200.f, 800.f), headSprite(texProjWater) {
-    shape.setSize(sf::Vector2f(60.f, 120.f));
+    shape.setSize(sf::Vector2f(60.f, 180.f));
     shape.setFillColor(sf::Color::Transparent);
     shape.setOutlineThickness(0.f);
     shape.setPosition(sf::Vector2f(startX, startY));
@@ -24,7 +24,7 @@ Player::Player(float startX, float startY) : movementHandler(400.f, 1000.f, 1200
 
     headAnimTimer = 0.f;
     headSeqIndex = 0;
-    hoverOffset = 0.f;
+    hoverOffset = +5.f;
 
     cloak.initialize(32, 90.f, 170.f);
 
@@ -33,13 +33,17 @@ Player::Player(float startX, float startY) : movementHandler(400.f, 1000.f, 1200
     texProjEarth.loadFromFile("assets/player_projectile_earth.png");
     texProjAir.loadFromFile("assets/player_projectile_air.png");
 
-    soundBuffers[0].loadFromFile("assets/shoot_water.mp3");
-    soundBuffers[1].loadFromFile("assets/shoot_fire.mp3");
-    soundBuffers[2].loadFromFile("assets/shoot_air.mp3");
-    soundBuffers[3].loadFromFile("assets/shoot_earth.mp3");
-    soundBuffers[4].loadFromFile("assets/player_damage.mp3");
+    soundBuffers[0].loadFromFile("assets/player.waterAttack.mp3");
+    soundBuffers[1].loadFromFile("assets/player.fireAttack.mp3");
+    soundBuffers[2].loadFromFile("assets/player.airAttack.mp3");
+    soundBuffers[3].loadFromFile("assets/player.rockAttack.mp3");
+    soundBuffers[4].loadFromFile("assets/player.damageTaken.mp3");
 
-    for (int i = 0; i < 5; ++i) sounds.emplace_back(soundBuffers[i]);
+    for (int i = 0; i < 5; ++i) {
+        sounds.emplace_back(soundBuffers[i]);
+        sounds[i].setVolume(10.f);
+    }
+    
 }
 
 void Player::playSound(int index) {
@@ -81,7 +85,7 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight, cons
     sf::Vector2f playerPos = shape.getPosition();
 
     float cloakX = playerPos.x;
-    float cloakY = playerPos.y-80.f;
+    float cloakY = playerPos.y;
     cloak.setPosition(sf::Vector2f(cloakX, cloakY));
     cloak.update(deltaTime, currentVelocity);
 
@@ -159,7 +163,7 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight, cons
     else headSprite.setRotation(sf::degrees(90.f));
 
     hoverOffset = std::sin(totalTime * 4.0f) * 6.0f;
-    headSprite.setPosition(sf::Vector2f(playerPos.x+45.f, playerPos.y - 150.f + hoverOffset));
+    headSprite.setPosition(sf::Vector2f(playerPos.x+45.f, playerPos.y - 60 + hoverOffset));
 
     if (isFullyCharged || (currentElementType == 0 && chargeTimer >= 1.0f)) {
         float flashCycle = std::fmod(totalTime, 0.2f);
@@ -171,12 +175,12 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight, cons
     }
 
     bool zPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z);
-    float spawnX = playerPos.x + 30.f;
-    float spawnY = playerPos.y + 60.f;
+    float spawnX = playerPos.x + 45.f;
+    float spawnY = playerPos.y - 60.f + hoverOffset;
 
-    float maxCharge = 10.f;
-    if (currentElementType == 3) maxCharge = 6.f;
-    if (currentElementType == 2) maxCharge = 1.0f;
+    float maxCharge = 4.0f;
+    if (currentElementType == 3) maxCharge = 3.0f;
+    if (currentElementType == 2) maxCharge = 2.0f;
 
     if (currentElementType == 1 || currentElementType == 3) {
         if (zPressed && prevZPressed && !isFullyCharged && projectiles.empty()) {
@@ -186,22 +190,25 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight, cons
         else if (zPressed && !prevZPressed && isFullyCharged) {
             if (currentElementType == 1) {
                 projectiles.push_back(std::make_unique<FireProjectile>(spawnX, spawnY, aimX, aimY, &texProjFire));
+                playSound(1);
             }
             else {
                 projectiles.push_back(std::make_unique<EarthProjectile>(spawnX, spawnY, aimX, aimY, &texProjEarth));
+                playSound(3);
             }
             isFullyCharged = false; chargeTimer = 0.f; cloak.setCurrentColor(sf::Color(128, 128, 128));
         }
         else if (!zPressed && prevZPressed && !isFullyCharged) chargeTimer = 0.f;
     }
-    else if (currentElementType == 0) {
+    else if (currentElementType == 0) { //it was more complicated but i changed it that's why it's weird
         if (zPressed && projectiles.empty()) {
             chargeTimer += deltaTime;
-            if (chargeTimer > 10.f) chargeTimer = 10.f;
+            if (chargeTimer > 2.0f) chargeTimer = 2.0f;
         }
         else if (!zPressed && prevZPressed) {
             if (chargeTimer >= 1.0f) {
                 projectiles.push_back(std::make_unique<WaterProjectile>(spawnX, spawnY, aimX, aimY, chargeTimer, &texProjWater));
+                playSound(0);
             }
             chargeTimer = 0.f; cloak.setCurrentColor(sf::Color(128, 128, 128));
         }
@@ -211,8 +218,9 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight, cons
             chargeTimer += deltaTime;
             if (chargeTimer > maxCharge) chargeTimer = maxCharge;
             if (airCooldownTimer <= 0.f) {
-                projectiles.push_back(std::make_unique<AirProjectile>(spawnX, spawnY, aimX, aimY, &texProjAir));
-                airCooldownTimer = 0.15f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / 0.35f));
+                projectiles.push_back(std::make_unique<AirProjectile>(spawnX, spawnY, aimX, 0.f, &texProjAir));
+                playSound(2);
+                airCooldownTimer = 0.35f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / 0.35f));
             }
         }
         else chargeTimer = 0.f;
@@ -237,6 +245,13 @@ void Player::update(float deltaTime, float screenWidth, float screenHeight, cons
 
     for (auto it = projectiles.begin(); it != projectiles.end();) {
         (*it)->update(deltaTime, sf::Vector2f(spawnX, spawnY), aimX, aimY);
+
+        sf::Vector2f projPos = (*it)->getPosition();
+        if (projPos.x < -150.f || projPos.x > screenWidth + 150.f ||
+            projPos.y < -150.f || projPos.y > screenHeight + 150.f) {
+            (*it)->deactivate();
+        }
+
         if (!(*it)->isActive()) it = projectiles.erase(it);
         else ++it;
     }
@@ -261,13 +276,14 @@ sf::Vector2f Player::getPosition() const { return shape.getPosition(); }
 
 void Player::resetPositionForPhase(int phase, float screenWidth, float screenHeight) {
     movementHandler.setVelocity(sf::Vector2f(0.f, 0.f));
-    if (phase == 0) shape.setPosition(sf::Vector2f(500.f, 700.f - 200.f));
-    else if (phase == 1) shape.setPosition(sf::Vector2f((screenWidth / 2.f) - 50.f, 1100.f - 200.f));
-    else if (phase == 2) shape.setPosition(sf::Vector2f(200.f, screenHeight - 200.f));
+
+    float centerX = (screenWidth / 2.f) - 30.f;
+    if (phase == 0) shape.setPosition(sf::Vector2f(centerX, 700.f - 200.f));
+    else if (phase == 1) shape.setPosition(sf::Vector2f(centerX, 1100.f - 200.f));
+    else if (phase == 2) shape.setPosition(sf::Vector2f(centerX, screenHeight - 200.f));
     else if (phase == 3) {
-        float cx = screenWidth / 2.f;
         float cy = screenHeight / 2.f + 100.f;
-        shape.setPosition(sf::Vector2f(cx - 50.f, (cy + 350.f) - 200.f));
+        shape.setPosition(sf::Vector2f(centerX, (cy + 350.f) - 200.f));
     }
 }
 
@@ -281,4 +297,12 @@ void Player::reset(float startX, float startY) {
     projectiles.clear();
     movementHandler.setVelocity(sf::Vector2f(0.f, 0.f));
     cloak.setCurrentColor(sf::Color(128, 128, 128));
+}
+sf::FloatRect Player::getBounds() const {
+    sf::FloatRect bounds = shape.getGlobalBounds();
+    bounds.position.y += 55.f;
+	bounds.position.x += 25.f;
+    bounds.size.y = 60.f;
+	bounds.size.x = 40.f;
+    return bounds;
 }

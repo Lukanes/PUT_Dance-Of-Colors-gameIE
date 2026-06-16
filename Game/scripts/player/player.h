@@ -12,10 +12,10 @@ public:
     Player(float startX, float startY);
     void update(float deltaTime, float screenWidth, float screenHeight, const std::vector<sf::FloatRect>& platforms);
     void draw(sf::RenderWindow& window);
-
+    sf::FloatRect getBounds() const;
     int getHealth() const;
     void setHealth(int newHealth);
-    float getMaxHealth() const { return 99.f; }
+    float getMaxHealth() const { return 10.f; }
 
     std::vector<std::unique_ptr<Projectile>>& getProjectiles();
 

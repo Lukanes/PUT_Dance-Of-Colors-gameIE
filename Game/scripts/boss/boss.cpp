@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <cstdint>
 
+
 Boss::Boss(float screenWidth, float screenHeight) : width(screenWidth), height(screenHeight), bossSprite(texBossFire) {
     texWaterBubble.loadFromFile("assets/boss_water_bubble.png");
     texWaterKnife.loadFromFile("assets/boss_water_knife.png");
@@ -65,6 +66,7 @@ Boss::Boss(float screenWidth, float screenHeight) : width(screenWidth), height(s
     earthWall.setSize(sf::Vector2f(400.f, screenHeight));
     earthWall.setTexture(&texBossGround);
 
+    bossSprite.setTexture(texBossFire);
     setupPhase();
 }
 
@@ -79,8 +81,8 @@ void Boss::setupPhase() {
         bossAnim.frameTime = 0.1f;
         bossSprite.setTextureRect(bossAnim.getRect());
         bossSprite.setOrigin(sf::Vector2f(static_cast<float>(bossAnim.frameSize.x) / 2.f, static_cast<float>(bossAnim.frameSize.y) / 2.f));
-        shape.setSize(sf::Vector2f(250.f, 250.f));
-        shape.setOrigin(sf::Vector2f(125.f, 125.f));
+        shape.setSize(sf::Vector2f(500.f, 500.f));
+        shape.setOrigin(sf::Vector2f(250.f, 250.f));
         bossSprite.setScale(sf::Vector2f(6.f, 6.f));
     }
     else if (currentPhase == 1) {
@@ -101,8 +103,8 @@ void Boss::setupPhase() {
         bossAnim.frameTime = 0.1f;
         bossSprite.setTextureRect(bossAnim.getRect());
         bossSprite.setOrigin(sf::Vector2f(static_cast<float>(bossAnim.frameSize.x) / 2.f, static_cast<float>(bossAnim.frameSize.y) / 2.f));
-        shape.setSize(sf::Vector2f(400.f, 400.f));
-        shape.setOrigin(sf::Vector2f(200.f, 200.f));
+        shape.setSize(sf::Vector2f(200.f, 200.f));
+        shape.setOrigin(sf::Vector2f(100.f, 100.f));
         bossSprite.setScale(sf::Vector2f(6.f, 6.f));
     }
 
@@ -176,8 +178,14 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
     }
 
     stateTimer += deltaTime;
-    if (attackTimer > 0.f) attackTimer -= deltaTime;
     if (invulnTimer > 0.f) invulnTimer -= deltaTime;
+
+    if (stateTimer < 1.0f) {
+        attackTimer = 1.0f;
+    }
+    else {
+        if (attackTimer > 0.f) attackTimer -= deltaTime;
+    }
 
     float hpPercent = health / maxHealth;
     float aggressionMapped = (1.0f - hpPercent) / 0.8f;
@@ -197,7 +205,7 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
     if (currentPhase == 0) {
         isVulnerable = true;
 
-        float idealX = playerPos.x;
+        float idealX = playerPos.x-150.f;
         float lerpX = currentPos.x + (idealX - currentPos.x) * 1.5f * deltaTime;
         float hoverY = 150.f + std::sin(stateTimer * 2.0f) * 30.f;
         shape.setPosition(sf::Vector2f(lerpX, hoverY));
@@ -206,16 +214,16 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
             if (std::fmod(stateTimer, 0.1f) < deltaTime) {
                 if (rand() % 100 < 75) {
                     float dropX1 = 200.f + static_cast<float>(rand() % 600);
-                    spawnAttack(sf::Vector2f(dropX1, -50.f), sf::Vector2f(0.f, 600.f), sf::Vector2f(70.f, 70.f), 3.f, sf::Color::White, &texFireDrop, 0);
+                    spawnAttack(sf::Vector2f(dropX1, -50.f), sf::Vector2f(0.f, 600.f), sf::Vector2f(35.f, 70.f), 3.f, sf::Color::White, &texFireDrop, 0);
                     float dropX2 = width - 800.f + static_cast<float>(rand() % 600);
-                    spawnAttack(sf::Vector2f(dropX2, -50.f), sf::Vector2f(0.f, 600.f), sf::Vector2f(70.f, 70.f), 3.f, sf::Color::White, &texFireDrop, 0);
+                    spawnAttack(sf::Vector2f(dropX2, -50.f), sf::Vector2f(0.f, 600.f), sf::Vector2f(35, 70.f), 3.f, sf::Color::White, &texFireDrop, 0);
                 }
             }
         }
 
         if (attackTimer <= 0.f) {
             attackTimer = 5.0f / aggressionMultiplier;
-            attackState = 1 + chooseAttack(0, 4);
+            attackState = 1 + chooseAttack(0, 5);
             subStateTimer = 0.f;
             telegraphs.clear();
         }
@@ -224,7 +232,7 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
             subStateTimer += deltaTime * aggressionMultiplier;
             if (subStateTimer > 0.5f && subStateTimer < 2.5f) {
                 if (std::fmod(subStateTimer, 0.15f) < deltaTime * aggressionMultiplier) {
-                    float rx = 100.f + static_cast<float>(rand() % static_cast<int>(width - 200.f));
+                    float rx = 50.f + static_cast<float>(rand() % static_cast<int>(width - 200.f));
                     int type = (rand() % 10 < 3) ? 1 : 0;
                     spawnAttack(sf::Vector2f(rx, -100.f), sf::Vector2f(0.f, 1400.f), sf::Vector2f(90.f, 90.f), 3.f, sf::Color::White, type == 1 ? &texFireMeteor : &texFireDrop, type);
                 }
@@ -236,7 +244,7 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
 
             if (telegraphs.empty()) {
                 sf::RectangleShape t1(sf::Vector2f(300.f, height)); t1.setPosition(sf::Vector2f(0.f, 0.f));
-                sf::RectangleShape t2(sf::Vector2f(width - 300.f, height)); t2.setPosition(sf::Vector2f(800.f, 0.f));
+                sf::RectangleShape t2(sf::Vector2f(300.f, height)); t2.setPosition(sf::Vector2f(width/2.f -150.f, 0.f));
                 sf::RectangleShape t3(sf::Vector2f(300.f, height)); t3.setPosition(sf::Vector2f(width - 300.f, 0.f));
                 t1.setFillColor(sf::Color(255, 0, 0, 100)); t2.setFillColor(sf::Color(255, 0, 0, 100)); t3.setFillColor(sf::Color(255, 0, 0, 100));
                 telegraphs.push_back(t1); telegraphs.push_back(t2); telegraphs.push_back(t3);
@@ -253,7 +261,7 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
                 attackState = 0;
             }
         }
-        else if (attackState == 3) {
+        else if (attackState == 3 || attackState == 5) {
             subStateTimer += deltaTime * aggressionMultiplier;
 
             if (telegraphs.empty()) {
@@ -270,9 +278,9 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
                 spawnAttack(sf::Vector2f(width / 2.f, height - 100.f), sf::Vector2f(0.f, 0.f), sf::Vector2f(200.f, 200.f), 0.5f, sf::Color::White, &texFireMeteor, 0);
                 subStateTimer = 1.2f;
             }
-            else if (subStateTimer >= 1.5f) {
-                spawnAttack(sf::Vector2f(width / 2.f - 100.f, height - 150.f), sf::Vector2f(-1400.f, 0.f), sf::Vector2f(70.f, 70.f), 4.f, sf::Color::White, &texFireDrop, 0);
-                spawnAttack(sf::Vector2f(width / 2.f + 100.f, height - 150.f), sf::Vector2f(1400.f, 0.f), sf::Vector2f(70.f, 70.f), 4.f, sf::Color::White, &texFireDrop, 0);
+            else if (subStateTimer >= 3.0f) {
+                spawnAttack(sf::Vector2f(width / 2.f - 100.f, height - 150.f), sf::Vector2f(-1400.f, 0.f), sf::Vector2f(35.f, 70.f), 4.f, sf::Color::White, &texFireDrop, 0);
+                spawnAttack(sf::Vector2f(width / 2.f + 100.f, height - 150.f), sf::Vector2f(1400.f, 0.f), sf::Vector2f(35.f, 70.f), 4.f, sf::Color::White, &texFireDrop, 0);
                 telegraphs.clear();
                 attackState = 0;
             }
@@ -335,15 +343,31 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
             else if (subStateTimer <= 3.0f) {
                 shape.setRotation(sf::degrees(subStateTimer * 3000.f));
                 shape.setPosition(sf::Vector2f(savedTargetPos.x, savedTargetPos.y));
+
+                if (telegraphs.empty()) {
+                    if (savedTargetPos.x != 950.f) {
+                        sf::RectangleShape t(sf::Vector2f(160.f, height)); t.setPosition(sf::Vector2f(950.f - 80.f, 0.f)); t.setFillColor(sf::Color(0, 0, 255, 100)); telegraphs.push_back(t);
+                    }
+                    if (savedTargetPos.x != width / 2.f) {
+                        sf::RectangleShape t(sf::Vector2f(160.f, height)); t.setPosition(sf::Vector2f(width / 2.f - 80.f, 0.f)); t.setFillColor(sf::Color(0, 0, 255, 100)); telegraphs.push_back(t);
+                    }
+                    if (savedTargetPos.x != width - 950.f) {
+                        sf::RectangleShape t(sf::Vector2f(160.f, height)); t.setPosition(sf::Vector2f(width - 950.f - 80.f, 0.f)); t.setFillColor(sf::Color(0, 0, 255, 100)); telegraphs.push_back(t);
+                    }
+                }
+                float alphaPulse = 80.f + 50.f * std::sin(subStateTimer * 15.f);
+                for (auto& t : telegraphs) t.setFillColor(sf::Color(0, 100, 255, static_cast<std::uint8_t>(alphaPulse)));
             }
             else if (subStateTimer >= 3.0f && subStateTimer < 3.1f) {
                 if (savedTargetPos.x != 950.f) spawnAttack(sf::Vector2f(950.f, height - 400.f), sf::Vector2f(0.f, 0.f), sf::Vector2f(160.f, 800.f), 1.5f, sf::Color::White, &texWaterGeyser, 1);
                 if (savedTargetPos.x != width / 2.f) spawnAttack(sf::Vector2f(width / 2.f, height - 400.f), sf::Vector2f(0.f, 0.f), sf::Vector2f(160.f, 800.f), 1.5f, sf::Color::White, &texWaterGeyser, 1);
                 if (savedTargetPos.x != width - 950.f) spawnAttack(sf::Vector2f(width - 950.f, height - 400.f), sf::Vector2f(0.f, 0.f), sf::Vector2f(160.f, 800.f), 1.5f, sf::Color::White, &texWaterGeyser, 1);
+                telegraphs.clear();
                 subStateTimer = 3.2f;
             }
             else if (subStateTimer >= 4.5f) attackState = 0;
         }
+
         else if (attackState == 2) {
             isVulnerable = true;
             subStateTimer += deltaTime * aggressionMultiplier;
@@ -396,22 +420,34 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
                 float lerpX = currentPos.x + (width / 2.f - currentPos.x) * 4.0f * deltaTime;
                 shape.setPosition(sf::Vector2f(lerpX, height - 100.f));
             }
+            else if (subStateTimer > 1.0f && subStateTimer < 2.0f) {
+                if (telegraphs.empty()) {
+                    float targetsX[3] = { 950.f, width / 2.f, width - 950.f };
+                    for (int i = 0; i < 3; ++i) {
+                        sf::RectangleShape t(sf::Vector2f(60.f, height)); t.setPosition(sf::Vector2f(targetsX[i] - 30.f, 0.f)); t.setFillColor(sf::Color(0, 0, 255, 100)); telegraphs.push_back(t);
+                    }
+                }
+                float alphaPulse = 80.f + 50.f * std::sin(subStateTimer * 15.f);
+                for (auto& t : telegraphs) t.setFillColor(sf::Color(0, 100, 255, static_cast<std::uint8_t>(alphaPulse)));
+            }
             else if (subStateTimer >= 2.0f && subStateTimer < 2.1f) {
                 float targetsX[3] = { 950.f, width / 2.f, width - 950.f };
                 for (int i = 0; i < 3; ++i) {
                     spawnAttack(sf::Vector2f(targetsX[i], height - 100.f), sf::Vector2f(0.f, -1800.f), sf::Vector2f(60.f, 200.f), 6.f, sf::Color::White, &texWaterKnife, 4);
                 }
+                telegraphs.clear();
                 subStateTimer = 2.2f;
             }
             else if (subStateTimer >= 3.5f) attackState = 0;
-        }
+            }
+
     }
     else if (currentPhase == 2) {
         isVulnerable = true;
         shape.setPosition(earthWall.getPosition() + sf::Vector2f(200.f, height / 2.f));
 
         if (attackState == 0) {
-            if (std::fmod(stateTimer, 1.0f / aggressionMultiplier) < deltaTime) {
+            if (std::fmod(stateTimer, 1.5f / aggressionMultiplier) < deltaTime) {
                 sf::Vector2f dir = playerPos - shape.getPosition();
                 float dist = std::sqrt(dir.x * dir.x + dir.y * dir.y);
                 if (dist != 0) { dir.x /= dist; dir.y /= dist; }
@@ -420,7 +456,7 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
         }
 
         if (attackTimer <= 0.f) {
-            attackTimer = 2.5f / aggressionMultiplier;
+            attackTimer = 3.5f / aggressionMultiplier;
             attackState = 1 + chooseAttack(2, 4);
             subStateTimer = 0.f;
             telegraphs.clear();
@@ -429,15 +465,15 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
         if (attackState == 1) {
             subStateTimer += deltaTime * aggressionMultiplier;
             if (subStateTimer > 0.5f && subStateTimer < 0.55f) {
-                spawnAttack(sf::Vector2f(width, height - 75.f), sf::Vector2f(-1200.f, 0.f), sf::Vector2f(80.f, 100.f), 6.f, sf::Color::White, &texBossGround, 2);
-                subStateTimer = 0.6f;
+                spawnAttack(sf::Vector2f(width, height - 75.f), sf::Vector2f(-800.f, 0.f), sf::Vector2f(60.f, 175.f), 6.f, sf::Color::White, &texBossGround, 6);
+                subStateTimer = 1.0f;
             }
-            else if (subStateTimer > 1.2f && subStateTimer < 1.25f) {
-                spawnAttack(sf::Vector2f(width, height - 125.f), sf::Vector2f(-1200.f, 0.f), sf::Vector2f(80.f, 200.f), 6.f, sf::Color::White, &texBossGround, 2);
-                subStateTimer = 1.3f;
+            else if (subStateTimer > 2.0f && subStateTimer < 2.05f) {
+                spawnAttack(sf::Vector2f(width, height - 125.f), sf::Vector2f(-800.f, 0.f), sf::Vector2f(80.f, 275.f), 6.f, sf::Color::White, &texBossGround, 6);
+                subStateTimer = 2.1f;
             }
-            else if (subStateTimer > 1.9f && subStateTimer < 1.95f) {
-                spawnAttack(sf::Vector2f(width, height - 200.f), sf::Vector2f(-1200.f, 0.f), sf::Vector2f(80.f, 300.f), 6.f, sf::Color::White, &texBossGround, 2);
+            else if (subStateTimer > 3.0f && subStateTimer < 3.05f) {
+                spawnAttack(sf::Vector2f(width+300.f, height - 175.f), sf::Vector2f(-800.f, 0.f), sf::Vector2f(100.f, 375.f), 6.f, sf::Color::White, &texBossGround, 6);
                 attackState = 0;
             }
         }
@@ -472,11 +508,12 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
                     spawnAttack(shape.getPosition(), sf::Vector2f(0.f, 0.f), sf::Vector2f(3000.f, 80.f), 1.0f, sf::Color::White, &texEarthLaser, 1);
                     attacks.back().shape.setOrigin(sf::Vector2f(0.f, 40.f));
                     attacks.back().shape.setRotation(sf::degrees(angle));
+                    attacks.back().isLaser = true;
                     telegraphs.clear();
                 }
             }
 
-            if (subStateTimer >= 3.6f) {
+            if (subStateTimer >= 2.5f) {
                 attackState = 0;
                 telegraphs.clear();
             }
@@ -505,6 +542,7 @@ void Boss::update(float deltaTime, sf::Vector2f playerPos) {
         }
     }
     else if (currentPhase == 3) {
+        isVulnerable = true;
         float cx = width / 2.f;
         float cy = height / 2.f + 100.f;
         float offsetY = 350.f;
@@ -696,7 +734,23 @@ void Boss::spawnAttack(sf::Vector2f pos, sf::Vector2f vel, sf::Vector2f size, fl
 
 std::vector<sf::FloatRect> Boss::getAttackBounds() const {
     std::vector<sf::FloatRect> bounds;
-    for (const auto& atk : attacks) bounds.push_back(atk.shape.getGlobalBounds());
+    for (const auto& atk : attacks) {
+        if (atk.type == 1 && currentPhase == 2) {
+            sf::Vector2f pos = atk.shape.getPosition();
+            float angle = atk.shape.getRotation().asDegrees() * 3.14159f / 180.f;
+            float len = 3000.f;
+            float thickness = 12.f;
+            sf::FloatRect laserRect(
+                sf::Vector2f(pos.x - thickness / 2.f, pos.y - thickness / 2.f),
+                sf::Vector2f(len * std::abs(std::cos(angle)) + thickness,
+                    len * std::abs(std::sin(angle)) + thickness)
+            );
+            bounds.push_back(laserRect);
+        }
+        else {
+            bounds.push_back(atk.shape.getGlobalBounds());
+        }
+    }
     for (const auto& flame : floorFlames) bounds.push_back(flame.shape.getGlobalBounds());
     if (currentPhase == 1) bounds.push_back(waterFloor.getGlobalBounds());
     if (currentPhase == 3 && attackState > 0 && subStateTimer > 1.8f) bounds.push_back(shape.getGlobalBounds());
@@ -751,7 +805,7 @@ std::vector<sf::FloatRect> Boss::getPlatformBounds() const {
 }
 
 void Boss::reset(float screenWidth, float screenHeight) {
-    currentPhase = 0;
+    currentPhase = rand() % 4;
     attackTimer = 0.f;
     attackState = 0;
     subStateTimer = 0.f;

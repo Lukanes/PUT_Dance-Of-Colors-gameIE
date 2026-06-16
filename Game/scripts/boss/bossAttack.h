@@ -7,4 +7,5 @@ struct BossAttack {
     float lifetime = 0.f;
     bool active = false;
     int type = 0;
+    bool isLaser = false;
 };

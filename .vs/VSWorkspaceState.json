@@ -7,8 +7,6 @@
   },
   "ExpandedNodes": [
     "",
-    "\\Game",
-    "\\Game\\scripts",
     "\\Game\\scripts\\area",
     "\\Game\\scripts\\boss",
     "\\Game\\scripts\\interface",
@@ -17,6 +15,6 @@
     "\\Game\\scripts\\player\\projectiles",
     "\\Game\\scripts\\player\\sprites"
   ],
-  "SelectedNode": "\\Game\\scripts\\player\\player.cpp",
+  "SelectedNode": "\\Game",
   "PreviewInSolutionExplorer": false
 }

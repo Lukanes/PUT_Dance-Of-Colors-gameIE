@@ -47,7 +47,6 @@ private:
     float attackTimer;
     float subStateTimer;
     int attackState;
-
     float invulnTimer;
     bool isVulnerable;
     float width;

@@ -37,6 +37,10 @@ bool Projectile::checkCollision(const sf::FloatRect& targetBounds) const {
 void Projectile::deactivate() { active = false; }
 sf::Vector2f Projectile::getPosition() const { return sprite.getPosition(); }
 
+sf::FloatRect Projectile::getBounds() const {
+    return sprite.getGlobalBounds();
+}
+
 WaterProjectile::WaterProjectile(float startX, float startY, float dirX, float dirY, float charge, const sf::Texture* tex)
     : Projectile(startX, startY, 0, tex), speed(1200.f)
 {
@@ -99,12 +103,21 @@ FireProjectile::FireProjectile(float startX, float startY, float dirX, float dir
     sprite.setOrigin(sf::Vector2f(static_cast<float>(frameWidth) / 2.f, static_cast<float>(frameHeight) / 2.f));
 
     float scale = 150.f / static_cast<float>(frameWidth);
-    sprite.setScale(sf::Vector2f(dirX < 0 ? -scale : scale, scale));
-    sprite.setRotation(sf::degrees(0.f));
+    sprite.setScale(sf::Vector2f(scale, scale));
 
     float length = std::sqrt(dirX * dirX + dirY * dirY);
-    if (length != 0) { dirX /= length; dirY /= length; }
-    else { dirX = 1.f; dirY = 0.f; }
+    if (length != 0) {
+        dirX /= length;
+        dirY /= length;
+    }
+    else {
+        dirX = 1.f;
+        dirY = 0.f;
+    }
+
+    float angle = std::atan2(dirY, dirX) * 180.f / 3.14159265f;
+    sprite.setRotation(sf::degrees(angle));
+
     velocity = sf::Vector2f(dirX * speed, dirY * speed);
 }
 

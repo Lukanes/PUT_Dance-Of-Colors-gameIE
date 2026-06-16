@@ -6,11 +6,16 @@
 #include "player.h"
 #include "boss.h"
 #include "area.h"
+#include <SFML/Audio.hpp>
+#include <ctime>
+
+
 
 enum class GameState { MENU, GAME, GAME_OVER };
 
 
 int main() {
+    srand(static_cast<unsigned int>(time(nullptr)));
     sf::RenderWindow window(sf::VideoMode({ 3440, 1440 }), "Dance of Colors");
     window.setFramerateLimit(60);
 
@@ -19,6 +24,14 @@ int main() {
 
     GameClock gameClock;
     Interface gameInterface;
+
+	sf::Music backgroundMusic;
+    if (!backgroundMusic.openFromFile("assets/BackgroundMusic.mp3")) {
+        std::cerr << "failed to load background music!\n";
+    }
+    backgroundMusic.setLooping(true);
+    backgroundMusic.setVolume(10.f);
+
 
     if (!gameInterface.loadResources()) {
         std::cerr << "failed to load interface resources!\n";
@@ -47,7 +60,8 @@ int main() {
     float score = 0.0f;
 
     GameState currentState = GameState::MENU;
-
+    bool showHitboxes = false;
+    bool prevHPressed = false;
     while (window.isOpen()) {
         float deltaTime = deltaClock.restart().asSeconds();
         float elapsedTime = gameClock.getElapsedTime();
@@ -98,6 +112,7 @@ int main() {
                 }
             }
             else if (currentState == GameState::GAME_OVER) {
+                backgroundMusic.stop();
                 if (auto const* keyPressed = event->getIf<sf::Event::KeyPressed>()) {
                     if (keyPressed->code == sf::Keyboard::Key::Up) {
                         gameOverMenu.moveUp();
@@ -124,8 +139,16 @@ int main() {
         }
 
         if (currentState == GameState::GAME) {
+            if (backgroundMusic.getStatus() != sf::Music::Status::Playing) {
+                backgroundMusic.play();
+            }
             if (playerInvulnTimer > 0.f) playerInvulnTimer -= deltaTime;
 
+            bool hPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::H);
+            if (hPressed && !prevHPressed) {
+                showHitboxes = !showHitboxes;
+            }
+            prevHPressed = hPressed;
             bool vPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::Key::V);
             if (vPressed && !prevVPressed) {
                 boss.nextPhase();
@@ -142,15 +165,64 @@ int main() {
             }
 
             if (playerInvulnTimer <= 0.f) {
-                sf::FloatRect playerRect(player.getPosition(), sf::Vector2f(100.f, 200.f));
+                sf::FloatRect playerRect = player.getBounds();
                 for (const auto& atkBound : boss.getAttackBounds()) {
                     if (playerRect.findIntersection(atkBound).has_value()) {
+
+                        player.playSound(4);
                         player.setHealth(player.getHealth() - 1);
                         playerInvulnTimer = 1.5f;
                         break;
                     }
                 }
             }
+
+            if (boss.getCurrentPhase() == 3) {
+                sf::Vector2f pPos = player.getPosition();
+                float cy = 1440.f / 2.f + 100.f;
+                float offsetY = 350.f;
+                float bottomPlatformY = cy + offsetY;
+
+                if (pPos.y + 180.f > bottomPlatformY + 80.f) {
+                    player.setHealth(player.getHealth() - 1);
+                    player.playSound(4);
+                    playerInvulnTimer = 1.5f;
+                    player.resetPositionForPhase(3, 3440.f, 1440.f);
+                }
+
+                if (pPos.x < 0.f || pPos.x > 3440.f - 60.f) {
+                    player.setHealth(player.getHealth() - 1);
+                    player.playSound(4);
+                    playerInvulnTimer = 1.5f;
+                    player.resetPositionForPhase(3, 3440.f, 1440.f);
+
+                }
+            }
+            if (boss.getCurrentPhase() == 2 && playerInvulnTimer <= 0.f) {
+                sf::FloatRect pb = player.getBounds();
+                sf::Vector2f playerCenter(pb.position.x + pb.size.x / 2.f,
+                    pb.position.y + pb.size.y / 2.f);
+
+                for (const auto& atk : boss.getAttacks()) {
+                    if (!atk.isLaser) continue;
+
+                    sf::Vector2f origin = atk.shape.getPosition();
+                    float angleDeg = atk.shape.getRotation().asDegrees();
+                    float angleRad = angleDeg * 3.14159f / 180.f;
+                    sf::Vector2f dir(std::cos(angleRad), std::sin(angleRad));
+                    sf::Vector2f toPlayer = playerCenter - origin;
+
+                    float dist = std::abs(toPlayer.x * (-dir.y) + toPlayer.y * dir.x);
+                    
+                    if (dist < 30.f) {
+                        player.playSound(4);
+                        player.setHealth(player.getHealth() - 1);
+                        playerInvulnTimer = 1.5f;
+                        break;
+                    }
+                }
+            }
+
 
             if (boss.checkEarthCrush()) {
                 player.setHealth(player.getHealth() - 2);
@@ -218,6 +290,7 @@ int main() {
             mainMenu.draw(window);
         }
         else if (currentState == GameState::GAME) {
+
 			gameArea.draw(window, boss.getCurrentPhase());
             boss.draw(window);
             player.draw(window);
@@ -226,9 +299,30 @@ int main() {
         else if (currentState == GameState::GAME_OVER) {
             gameOverMenu.draw(window);
         }
+        if (showHitboxes) {
+            auto drawDebugBox = [&](const sf::FloatRect& bounds, sf::Color color) {
+                sf::RectangleShape box(bounds.size);
+                box.setPosition(bounds.position);
+                box.setFillColor(sf::Color::Transparent);
+                box.setOutlineColor(color);
+                box.setOutlineThickness(2.f);
+                window.draw(box);
+                };
 
+            drawDebugBox(player.getBounds(), sf::Color::Red);
+            drawDebugBox(boss.getBounds(), sf::Color::Magenta);
+
+            for (const auto& attackRect : boss.getAttackBounds()) {
+                drawDebugBox(attackRect, sf::Color(255, 165, 0));
+            }
+
+            for (const auto& proj : player.getProjectiles()) {
+                if (proj->isActive()) {
+                    drawDebugBox(proj->getBounds(), sf::Color::Green);
+                }
+            }
+        }
         window.display();
     }
-
     return 0;
 }

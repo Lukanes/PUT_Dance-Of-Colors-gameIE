@@ -32,6 +32,7 @@ public:
     sf::Vector2f getPosition() const;
     int getType() const;
     virtual int getDamage() const = 0;
+    sf::FloatRect getBounds() const;
     bool checkCollision(const sf::FloatRect& targetBounds) const;
     void deactivate();
 };
@@ -64,7 +65,7 @@ private:
 public:
     AirProjectile(float startX, float startY, float dirX, float dirY, const sf::Texture* tex);
     void update(float deltaTime, sf::Vector2f playerPos, float aimX, float aimY) override;
-    int getDamage() const override { return 10; }
+    int getDamage() const override { return 20; }
 };
 
 class EarthProjectile : public Projectile {
@@ -73,5 +74,5 @@ private:
 public:
     EarthProjectile(float startX, float startY, float dirX, float dirY, const sf::Texture* tex);
     void update(float deltaTime, sf::Vector2f playerPos, float aimX, float aimY) override;
-    int getDamage() const override { return 35; }
+    int getDamage() const override { return 40; }
 };
