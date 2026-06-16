@@ -1,8 +1,0 @@
-================================================================================
-Linker Errors
-Generated: 2026-05-27T19:48:44.977Z
-Total Errors: 1
-================================================================================
-
-[LNK1168] (MSVC)
-nie można otworzyć pliku D:\DanceOfColors\build\Debug\SFML_Gra.exe do zapisu [D:\DanceOfColors\build\SFML_Gra.vcxproj]

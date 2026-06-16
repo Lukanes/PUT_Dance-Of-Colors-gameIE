@@ -1,0 +1,12 @@
+# ninja log v7
+9	56	8032731615150708	D:/DanceOfColorsGameIE2026/out/build/x64-Release/CMakeFiles/cmake.verify_globs	87c14548f0dd3a7a
+72	2120	8032731615781491	CMakeFiles/SFML_Gra.dir/Game/scripts/player/movement/movement.cpp.obj	73750454a1bb0c18
+58	2155	8032731615648906	CMakeFiles/SFML_Gra.dir/Game/scripts/area/area.cpp.obj	e49afc4392dc4ba9
+81	2198	8032731615869076	CMakeFiles/SFML_Gra.dir/Game/scripts/player/projectiles/projectile.cpp.obj	4ee4d5e53139985
+86	2233	8032731615923553	CMakeFiles/SFML_Gra.dir/Game/scripts/player/sprites/CloakMesh.cpp.obj	2c20df8cd143c17b
+68	2367	8032731615733479	CMakeFiles/SFML_Gra.dir/Game/scripts/interface/interface.cpp.obj	9dfcb34ad4871911
+76	2527	8032731615824482	CMakeFiles/SFML_Gra.dir/Game/scripts/player/player.cpp.obj	86d81c3d62c830e5
+90	2553	8032731615963695	CMakeFiles/SFML_Gra.dir/main.cpp.obj	ffbc4e1987e4aa72
+63	2683	8032731615699957	CMakeFiles/SFML_Gra.dir/Game/scripts/boss/boss.cpp.obj	a1ba2a51a9dff898
+2683	3708	8032731641896609	SFML_Gra.exe	e1e3c5531ea8e8dc
+16	52	8032732192747291	D:/DanceOfColorsGameIE2026/out/build/x64-Release/CMakeFiles/cmake.verify_globs	87c14548f0dd3a7a
